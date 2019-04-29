@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">LetsBuildThatApp</string>
+
+    <string name="details_thumbnail_content_description">Holds a thumbnail image for the selected feedVideo</string>
+    <string name="details_related_video_thumbnail_content_description">Holds a thumbnail image for the related video</string>
+    <string name="home_feed_thumbnail_content_description">Holds a thumbnail image for the feedVideo</string>
+    <string name="home_feed_profile_image_content_description">Holds a profile image of the channel</string>
+    <string name="number_of_views">Number of views:\u0020</string>
+    <string name="retry_icon">Retry icon</string>
+    <string name="tap_to_retry">Tap to retry</string>
+    <string name="unable_to_fetch_home_feed">Unable to fetch home feed</string>
+    <string name="unable_to_refresh_home_feed">Unable to refresh home feed</string>
+    <string name="unable_to_fetch_related_videos">Unable to fetch related videos</string>
+    <string name="views">\u0020views</string>
+</resources>

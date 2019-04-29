@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/related_videos_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" xmlns:tools="http://schemas.android.com/tools">
+
+  <ImageView
+      android:id="@+id/video_thumbnail_imageview"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      android:contentDescription="@string/details_thumbnail_content_description"/>
+
+  <TextView
+      android:id="@+id/video_name_textview"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:layout_constraintTop_toBottomOf="@id/video_thumbnail_imageview"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      android:layout_marginTop="8dp"
+      android:layout_marginStart="16dp"
+      android:layout_marginEnd="16dp"
+      style="@style/textAppearanceListItemTitle" />
+
+  <TextView
+      android:id="@+id/number_of_views_textview"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:layout_constraintTop_toBottomOf="@id/video_name_textview"
+      app:layout_constraintStart_toStartOf="parent"
+      android:layout_marginStart="16dp"
+      android:layout_marginEnd="16dp"
+      style="@style/textAppearanceListItemSubtitle" />
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:layout_constraintStart_toEndOf="@id/number_of_views_textview"
+      app:layout_constraintTop_toTopOf="@id/number_of_views_textview"
+      app:layout_constraintBottom_toBottomOf="@id/number_of_views_textview"
+      android:text="@string/views"
+      style="@style/textAppearanceListItemSubtitle"/>
+
+  <View
+      android:id="@+id/video_details_divider"
+      android:layout_width="match_parent"
+      android:layout_height="1dp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/number_of_views_textview"
+      android:layout_marginTop="8dp"
+      android:background="@android:color/darker_gray" />
+
+  <ImageView
+      android:id="@+id/channel_profile_imageview"
+      android:layout_width="40dp"
+      android:layout_height="40dp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/video_details_divider"
+      android:layout_marginStart="16dp"
+      android:layout_marginTop="8dp"
+      android:contentDescription="@string/home_feed_profile_image_content_description"/>
+
+  <TextView
+      android:id="@+id/channel_name_textview"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      app:layout_constraintStart_toEndOf="@id/channel_profile_imageview"
+      app:layout_constraintTop_toTopOf="@id/channel_profile_imageview"
+      app:layout_constraintBottom_toBottomOf="@id/channel_profile_imageview"
+      app:layout_constraintEnd_toEndOf="parent"
+      android:layout_marginStart="8dp"
+      style="@style/textAppearanceListItemTitle"/>
+
+  <View
+      android:id="@+id/channel_details_divider"
+      android:layout_width="match_parent"
+      android:layout_height="1dp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/channel_profile_imageview"
+      android:layout_marginTop="8dp"
+      android:background="@android:color/darker_gray" />
+
+  <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/details_recyclerview"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/channel_details_divider"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+  <LinearLayout
+      android:id="@+id/tap_to_retry"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:gravity="center"
+      android:layout_gravity="center"
+      android:orientation="vertical"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/channel_details_divider"
+      app:layout_constraintBottom_toBottomOf="parent"
+      android:visibility="gone"
+      tools:ignore="UseCompoundDrawables">
+
+    <ImageView
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/ic_refresh_black_24dp"
+        android:contentDescription="@string/retry_icon"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tap_to_retry"
+        style="@style/textAppearanceListItemTitle"/>
+
+  </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
